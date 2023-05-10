@@ -1,10 +1,15 @@
 const express = require("express");
 
+// création de l'instance express
 const app = express();
-const port = 8080;
 
-app.get("/", (req, res) => {
-    res.send("Hello World!");
-});
+// importation des routes
+const declarationRoutes = require("./routes/declaration.route");
 
-app.listen(port, () => console.log("Server is running on port : " + port));
+// définition des middlewares
+app.use(express.json());
+
+// définition des routes
+app.use("/api/declaration", declarationRoutes);
+
+module.exports = app;
