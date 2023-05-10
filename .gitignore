@@ -3,3 +3,9 @@ package-lock.json
 
 # Variables d'environnement
 .env
+
+# Config files
+config/config.json
+
+# Helpers file
+models.ps1
